@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-jwa1c-umc=nu^^w+#9a46flld#s6)f@!eltqmu2q$=+u^-8wmc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'item'
+    'item',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
